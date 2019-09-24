@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    .button {
+    background-color: #EC6A0A;
+    height:"30%"; width:"70%";
+    border:none;
+    font-weight: 100;
+    font-size:15px;padding:10px;
+    color:#fff;
+    }
+
+    .border{
+      border-color: #EC6A0A;
+      border-width:1px;
+    }
+  </style>
+
+     <body>   
+      <table bgcolor="#EC6A0A" width="100%" style="color:white">
+        <tr>
+        <td><h2 align="left">Customer Input</h2></td>
+        </tr></table>
+       <form action="/customerinput" method="POST">
+        <table width="1000" align="left">
+              <tr height="100">
+              <td><input class="border" type="text"  name="username"  value="<%=user.username%>"> </td>&nbsp;&nbsp;
+              <td><input class="border" type="text" name="email" value="<%=user.email%>"></td>
+             <br><br><br>
+            </tr>
+             
+              <tr>
+              <td><input type="radio" name="radiobutton" value="feedback"> Feedback <p></p><p><p></p></td>
+              <td><input type="radio" name="radiobutton" value="suggestion">Suggestion<p></p><p></p></td>
+              <td><input type="radio" name="radiobutton" value="complaint">Complaint
+              <select name="complainttype">
+                <option value="technical">Technical</option>
+                <option value="HR">HR</option>
+                <option value="business">Business</option>
+                <option value="finance">Finance</option>
+              </select> </td>
+
+            </tr>
+
+                                     
+          </table> <br>
+
+            <textarea class="border" rows="15" cols="100" align="center" name="textarea"> 
+              </textarea> <br>
+          
+          <input  type="submit" text="Submit" class ="button" value="SUBMIT" onclick="alertFunction()">
+            
+
+            </form>
+          <script>
+            function alertFunction() {
+              alert("Your Messege sent");
+            }      
+          </script>
+</body>
+</html> 

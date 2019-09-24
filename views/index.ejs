@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+                .button {
+                background-color: #EC6A0A;
+                height:"30%"; width:"70%";
+                border:none;
+                font-weight: 100;
+                font-size:15px;padding:10px;
+                color:#fff;
+                }
+            
+                .border{
+                  border-color: #EC6A0A;
+                  border-width:1px;
+                }
+
+                
+              </style>
+              <!--Adding popup.css file-->
+  <link rel="stylesheet" href="\stylesheets\popup.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+   
+  <table bgcolor="#EC6A0A" width="100%" style="color:white">
+    <tr>
+    <td><h1 align="left">Complaint Management</h1></td>
+    </tr>
+  </table>
+  <table width="1400">
+    <tr align="right">
+        <td> <a href="employeelogin">Employeelogin</a>||
+        <a href="adminlogin">Adminlogin</a></td>
+            </tr>
+  
+  </table>
+  <table width="100%">
+    <tr>
+      <td align="center">
+        <form action ="/signin" method="post">
+              
+          <table align="center">
+                 <tr><td align="center"> <h3> Sign In</h3></td></tr>
+                  
+                  <tr><td><input type="text" name="email1" value="<%=email%>" onfocus="this.value = (this.value == 'Email Address' ? '' : this.value);" onblur="if (this.value == '') {this.value = 'Email Address';}"></td></tr>
+                  <!--to display the email value in signin form when registration is completed-->
+                  <tr>
+                    <td> <input type="password" name="psw1" value="Password" onfocus="this.value = (this.value == 'Password' ? '' : this.value);" onblur="if (this.value == '') {this.value = 'Password';}"></td>
+                  </tr>
+                  <tr><td><a href="forgotpassword">Forgot password ?</a></td>
+                    
+                  </tr>
+                  <tr><td align="center"><input type="submit"  class="button" value="Login"></td></tr>               
+          </table>
+          </form>
+      </td>
+      <td width="50%" align="center">
+        <form action="/signup" method="POST" >
+          <table align="center">
+              <tr><td align="center"> <h4>Sign Up Form</h4></td></tr>          
+              <tr><td><input type="text" name="username1" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'NAME AND SURNAME';}"></td></tr>
+              <tr><td><input type="tel" name="usrtel" value="PHONE" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PHONE';}"></td></tr>
+              <tr><td><input type="email" name="email" value="EMAIL ADDRESS" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EMAIL ADDRESS';}"></td></tr>
+              <tr><td><input type="password" name="psw" value="PASSWORD" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PASSWORD';}"></td></tr>
+              <tr><td></td></tr>
+              <tr><td align="center"><input type="submit"  class="button" value="Register" ></td></tr>
+          </table>
+        </form>
+      </td>
+    </tr>
+  </table>
+ 
+           
+
+        
+</body>
+</html>
