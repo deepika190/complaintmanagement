@@ -11,8 +11,12 @@ const mysql = require('mysql');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var customerinputRouter = require('./routes/customerinput');
+
+
 var adminloginRouter=require('./routes/adminlogin');
+var addnewemployeeRouter=require('./routes/addnewemployee');
 var employeeloginRouter=require('./routes/employeelogin');
+
 var forgotpasswordRouter=require('./routes/forgotpassword');
 var resetpasswordRouter=require('./routes/resetpassword');
 
@@ -81,5 +85,6 @@ app.use('/selectcomplaint',selectcomplaintRouter);
 app.use('/sendcomplaint',complaintslistRouter);
 app.use('/forgotpassword',forgotpasswordRouter);
 app.use('/resetpassword',resetpasswordRouter);
+app.use('/addnewemployee',addnewemployeeRouter);
 
 module.exports = app;

@@ -28,7 +28,14 @@
           <table bgcolor="#EC6A0A" width="100%" style="color:white">
             <tr>
             <td><h2 align="left">Received complaints</h2></td>
-            </tr></table><br><br><br>
+            </tr></table><br>
+            <table align="right">
+                <tr>
+                  <td> <a href="addnewemployee.ejs">AddNewEmployee</a></td>
+                                 
+                </tr>
+            </table>
+            
             <%if(role == 'admin'){%>
             <form action="/selectcomplaint" method="POST">
               <table>
@@ -42,12 +49,18 @@
                       <option value="finance">Finance</option>
                       </select>
                     </td>
-                    <td> <input type="submit"  value="Click" height="20%" width="40%"> </td>
+                    <td> 
+                     <input type="submit"  value="Click" height="20%" width="40%"> 
+                    </td>
+                   
                 </tr>
+
+                
               </table>
             </form>
             <br><br><br>
             <%}%>
+            
     <div class="popup-position" id="contact-popup">
       <div class="popup-wrapper">
         <div id="popup-container">
@@ -154,15 +167,11 @@
                   <input type="text" name="remarks">
                 </td>
               
-          
-
-            <td>
-              <input type="submit"  class="button" value="Edit" >
-            </td>
-
-            <td>
-              <input type="submit"  class="button" value="Save" >
-            </td>
+                
+                    <td align="right">
+                        <input type="submit" value="Edit" height="30%" width="200%" class="button">
+                      </td>
+                 
 
           </tr>
           <% }) %>

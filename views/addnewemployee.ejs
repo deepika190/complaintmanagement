@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+        <style>
+                .button {
+                background-color: #EC6A0A;
+                height:"30%"; width:"70%";
+                border:none;
+                font-weight: 100;
+                font-size:15px;padding:10px;
+                color:#fff;
+                }
+            
+                .border{
+                  border-color: #EC6A0A;
+                  border-width:1px;
+                }
+        </style>
+            
+            <body>       
+                  <table bgcolor="#EC6A0A" width="100%" style="color:white">
+                    <tr>
+                    <td><h2 align="left">AddNewEmployee</h2></td>
+                    </tr>
+                   </table>
+                
+                <form action ="/addnewemployee" method="post" align="center"> <br><br><br>
+                
+                <table align="center">
+                    <tr><td><input  type="username" name="username" value="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter User Name';}"></td></tr>
+                    <tr><td><input type="phno" name="phno" value="phno" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PhoneNo';}"></td></tr>
+                    <tr><td><input  type="email" name="email" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EmailId';}"></td></tr>
+                    <tr><td><input type="password" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"></td></tr>
+                    <tr><td><input  type="role" name="role" value="role" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'role';}"></td></tr>
+                    <tr><td><input type="submit"  value="Save" class="button"></td></tr>
+                </table>
+            
+                </form>
+ 
+            </body>
+</html>
