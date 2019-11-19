@@ -34,9 +34,17 @@ router.post('/', function(req,res,next){
     }
     console.log(selectquery);
     db.query(selectquery, (err, result) => {
-      if (err) throw err;
-      console.log("select query is executed successfully");
-      res.render('complaintslist.ejs',{complaints:result, role: 'admin'});
+      if(err) throw err;
+        console.log("select query executed successfully");
+        let usersquery = "select username,uid,email from employeelogin as app where role='app';"+
+        " select username,uid,email from employeelogin as finance where role='finance';"+
+        " select username,uid,email from employeelogin as hr where role='hr';"+
+        " select username,uid,email from employeelogin as tech where role='tech';";
+        db.query(usersquery,(err,userres)=>{
+          if(err) throw err;
+          console.log(userres);
+          res.render('complaintslist.ejs',{complaints:result, role:'admin', users: userres}); //that complaint table data will access in tha name of complaints.
+        });    
     }
     );
   

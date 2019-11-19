@@ -21,14 +21,41 @@
               <!--Adding popup.css file-->
   <link rel="stylesheet" href="\stylesheets\popup.css"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
    
   <table bgcolor="#EC6A0A" width="100%" style="color:white">
     <tr>
-    <td><h1 align="left">Complaint Management</h1></td>
+    <td><h1 align="left">Complaint Management</h1></td>|
+    
+    <td>
+        <select name="Login">
+            <option value="<a href="./routes/employeelogin""">Employeelogin</a></option>
+            <option value="<a href="./routes/index""">Adminlogin</a>></option>
+        </select> 
+
+    </td>
     </tr>
   </table>
+
+  <div class="w3-row">
+      
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">
+      <a href="Customerinput.ejs">Suggessions</a></div>
+    </a>
+    
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Feedback</div>
+    </a>
+    
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Complaint</div>
+    </a>
+  </div>
+
+  
+    
+
+
   <table width="1400">
     <tr align="right">
         <td> <a href="employeelogin">Employeelogin</a>||
@@ -72,7 +99,8 @@
     </tr>
   </table>
  
-           
+  
+ 
 
         
 </body>

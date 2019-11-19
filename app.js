@@ -21,9 +21,10 @@ var forgotpasswordRouter=require('./routes/forgotpassword');
 var resetpasswordRouter=require('./routes/resetpassword');
 
 
-var complaintRouter=require('./routes/complaint');
+var empcomplaintRouter=require('./routes/empcomplaint');
 var complaintslistRouter=require('./routes/complaintslist');
 var selectcomplaintRouter=require('./routes/selectcomplaint');
+var employeecomplaintsRouter=require('./routes/employeecomplaints');
 
 
 
@@ -79,12 +80,13 @@ app.use('/customerinput', customerinputRouter);
 app.use('/adminlogin', adminloginRouter);
 app.use('/employeelogin', employeeloginRouter);
 app.use('/users', usersRouter);
-app.use('/complaint',complaintRouter);
+app.use('/empcomplaint',empcomplaintRouter);
 app.use('/complaintslist',complaintslistRouter);
 app.use('/selectcomplaint',selectcomplaintRouter);
 app.use('/sendcomplaint',complaintslistRouter);
 app.use('/forgotpassword',forgotpasswordRouter);
 app.use('/resetpassword',resetpasswordRouter);
 app.use('/addnewemployee',addnewemployeeRouter);
+app.use('/employeecomplaints',employeecomplaintsRouter);
 
 module.exports = app;

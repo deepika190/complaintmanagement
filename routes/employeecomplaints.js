@@ -4,7 +4,8 @@ var router = express.Router();
 
 
 router.get('/', function(req, res, next) {
-    res.render('employeelogin.ejs', { title: 'employeelogin'});
+
+    res.render('employeecomplaints.ejs', { title: 'employeecomplaints', complaints: {}});
   });
 
 
@@ -28,7 +29,7 @@ router.post('/',function(req,res,next){   //<form action="/adminlogin" in .ejs
     }
     else
     {
-      res.render('employeecomplaints.ejs',{title:'employeecomplaints'});
+      res.render('employeelogin.ejs',{title:'employeelogin'});
     }
 
   })

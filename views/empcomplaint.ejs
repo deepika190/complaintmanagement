@@ -36,32 +36,7 @@
                 </tr>
             </table>
             
-            <%if(role == 'admin'){%>
-            <form action="/selectcomplaint" method="POST">
-              <table>
-                <tr><td>Complaints:</td>
-                    <td>
-                      <select name="complainttype">
-                      <option value="All">All</option>
-                      <option value="technical">Technical</option>
-                      <option value="HR">HR</option>
-                      <option value="application">Application</option>
-                      <option value="finance">Finance</option>
-                      </select>
-                    </td>
-                    <td> 
-                     <input type="submit"  value="Click" height="20%" width="40%"> 
-                    </td>
-                   
-                </tr>
-
-                
-              </table>
-            </form>
-            <br><br><br>
-            <%}%>
-            
-    <div class="popup-position" id="contact-popup">
+               <div class="popup-position" id="contact-popup">
       <div class="popup-wrapper">
         <div id="popup-container">
             <h5>Send Email</h5>
@@ -125,31 +100,7 @@
               </td>
                
              
-             <td>               
-                <select name="employees">
-                  <option value="selectany">--SelectAny--</option>
-                    <% let index=0;
-                    switch(complaints.comtype)
-                    {
-                    case "Application":
-                      index = 0;
-                      break;
-                    case "HR":
-                      index = 2;
-                      break;
-                    case "technical":
-                      index = 3;
-                      break;
-                    case "finance":
-                      index = 1;
-                      break;
-                    default:
-                      index = 0;
-                    }; users[index].forEach((usr) => { %>
-                  <option value="<%=usr.username%>"><%=usr.username%></option>
-                  <%});%>
-                </select>
-               </td>
+             
                <td>
                   <input type="text" name="action_taken">
                </td>
@@ -166,9 +117,7 @@
                       </td>
                  
 
-          </tr>
-          <% }) %>
-          </table>
+        </tr></table>
 
          
           <script lang="javascript">

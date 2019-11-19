@@ -8,21 +8,21 @@ router.get('/', function(req,res,next){
     let selectquery;
     switch (currentuser.role) {
         case "app": {
-                selectquery ="select * from complaint where assignedto='application'";
+                selectquery ="select * from complaint where comtype='application'";
             break;
         }
         case "tech": {
-            selectquery ="select * from complaint where assignedto='technical'";
+            selectquery ="select * from complaint where comtype='technical'";
             //filter = filter + "technical')";
             break;
         }
         case "hr":{
-            selectquery="select * from complaint where assignedto='HR'";
+            selectquery="select * from complaint where comtype='HR'";
             break;
         }
 
         case "finance":{
-          selectquery="select * from complaint where assignedto='finance'";
+          selectquery="select * from complaint where comtype='finance'";
             break;
         }
         default:{

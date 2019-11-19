@@ -27,11 +27,18 @@
                 <form action ="/addnewemployee" method="post" align="center"> <br><br><br>
                 
                 <table align="center">
+
+                    <tr><td>
+                        <select name="Role">
+                        <option value="app">App</option>
+                        <option value="finance">Finance</option>
+                        <option value="hr">HR</option>
+                        <option value="tech">Tech</option>
+                        </select></td></tr>
                     <tr><td><input  type="username" name="username" value="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter User Name';}"></td></tr>
                     <tr><td><input type="phno" name="phno" value="phno" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'PhoneNo';}"></td></tr>
                     <tr><td><input  type="email" name="email" value="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'EmailId';}"></td></tr>
                     <tr><td><input type="password" name="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"></td></tr>
-                    <tr><td><input  type="role" name="role" value="role" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'role';}"></td></tr>
                     <tr><td><input type="submit"  value="Save" class="button"></td></tr>
                 </table>
             
